@@ -41,10 +41,10 @@ ggplot(movie, aes(x=vote_average, fill=genre)) +
 
 
 ## BUDGET vs GENRE
-bmovie = subset(movie, budget > 100000)
-bmovie$budget = bmovie$budget / 1000000
+budget_movie = subset(movie, budget > 100000)
+budget_movie$budget = budget_movie$budget / 1000000
 
-ggplot(bmovie, aes(y=genre, x =budget, fill = genre)) +
+ggplot(budget_movie, aes(y=genre, x =budget, fill = genre)) +
   geom_boxplot(alpha = 0.7,
                outlier.colour = "#1F3552", outlier.shape = 20) +
   xlab("Budget (million USD)") +
